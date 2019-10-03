@@ -1,0 +1,40 @@
+{
+  "requests": [
+    {
+      "leaveReason": "Exam",
+      "leaveStart": "2019-10-10",
+      "leaveEnd": "2019-10-17",
+      "staffid": "123",
+      "status": "approved",
+      "id": 1
+    },
+    {
+      "leaveReason": "Health",
+      "leaveStart": "2019-10-05",
+      "leaveEnd": "2019-10-10",
+      "staffid": "123",
+      "status": "pending",
+      "id": 2
+    }
+  ],
+  "staffs": [
+    {
+      "firstname": "admin",
+      "lastname": "admin",
+      "password": "password",
+      "staffid": "admin",
+      "linemanager": "admin",
+      "leavebanlance": "admin",
+      "id": 4
+    },
+    {
+      "firstname": "Emeka",
+      "lastname": "Victor",
+      "password": "password",
+      "staffid": "123",
+      "linemanager": "124",
+      "leavebanlance": "20",
+      "id": 6
+    }
+  ]
+}

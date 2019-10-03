@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width' initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LEAVE MANAGEMENT SYSTEM | PROFILE</title>
+    <link rel='stylesheet' href='styles.css'>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      let userId = window.localStorage.getItem("userId");
+      if(!(4)){
+          alert("Please Login");
+          window.location.href="login.html";
+      }
+  </script>
+  </head>
+
+  <body>
+  <!-- HEADER BEGINS HERE -->
+   <header id="user">
+      
+      <div class='container'>
+          <div id='index-logo'>
+            <h2 style="text-align: center">LEAVE MANAGEMENT SYSTEM</h2>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href='index.html'>HOME</a></li>
+              <li class='current'><a href='user-profile.html'>PROFILE</a></li>
+              <li><a href='user-dashboard.html'>DASHBOARD</a></li>
+              <li><a href='login.html' id="logout">LOG OUT</a></li>
+              <li><a href='#'>ABOUT US</a></li>
+            </ul>
+          </nav>
+
+      </div>
+    </header>
+    <!-- HEADER ENDS HERE -->
+
+    <!--THE MAIN SECTION STARTS HERE-->
+    <main>
+      <!--SECTION CONTAINER STARTS HERE-->
+      <section class = "container">
+        <h2 class="user-title">WELCOME TO LEAVE MANAGEMENT USER DASHBOARD</h2><hr><br>
+        <section>
+        <div class='container user-leave'> 
+            <p>ENTER LEAVE REASON</p>
+            <input type='text' placeholder='Enter Reason here.... ' id="reason">
+            <p>ENTER LEAVE START DATE</p>
+            <input id="date" type="date">
+            <p>ENTER LEAVE END DATE</p>
+            <input id="end" type="date">
+            <hr>
+            <button id="request-leave">Submit</button>
+        </div>
+        
+        <div class="profile">
+          <div class="user-card profile-card">
+            <img class="profile-image" src="img/img_avatar1.png" alt="user profile image">
+            <p class="profile-name">USERNAME</p>
+            <p>Leave Statistics</p>
+            <div class="profile-stats">
+              <div class="stats">
+                <span>Accepted</span>
+                <p class="stat-value">1</p>
+              </div>
+              <div class="stats">
+               <span>Pending</span>
+               <p class="stat-value">3</p>
+              </div>
+           </div>
+          <button type="submit">Edit Profile</button>
+        </div>
+
+        <div class="profile-table">
+          <table class="stats-table" id="request-table">
+            <tbody>
+              <tr>
+                <th>Request No</th>
+                <th>Leave Reason</th>
+                <th>Leave Start</th>
+                <th>Leave End</th>
+                <th>Staff ID</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </tbody>     
+          </table>
+        </div>
+    </section>
+    <!-- SECTION CONTAINER ENDS HERE-->
+    
+  </main>
+  <!--MAIN SECTION ENDS HERE-->
+
+  <footer>
+    <p>Annual Leave Management system | Copyright &copy; 2019</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+
+</html>

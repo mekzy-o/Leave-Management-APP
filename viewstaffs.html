@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width' initial-scale=1.0>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>LEAVE MANAGEMENT SYSTEM | ADMIN PAGE</title>
+		<link rel='stylesheet' href='styles.css'>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            let adminId = window.localStorage.getItem("adminId");
+            if(!(adminId)){
+                alert("Please Login");
+                window.location.href="login.html";
+            }
+        </script>
+    </head>
+    
+	<body>
+		<!-- HEADER SECTION STARTS HERE-->
+		<header>
+			<div class='container'>
+				<div id='index-logo'>
+						<h2>SOFT ALLIANCE LMS</h2>
+				</div>
+				<nav>
+					<ul>
+						<li><a href='index.html'>HOME</a></li>
+						<li><a href='login.html'>LOGOUT</a></li>
+						<li><a href='adminpage.html'>ADMIN</a></li>
+						<li><a href='#'>ABOUT US</a></li>
+						<li class='current'><a href='viewstaffs.html'>VIEW STAFFS</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- HEADER SECTION ENDS HERE-->
+
+		<!-- MAIN SECTION STARTS HERE-->
+		<main>
+
+		 <!-- SECTION CONTAINING ADMIN PAGE STARTS HERE-->
+		  	<section>
+				<h2 class="user-title">STAFF LIST</h2><hr><br>
+		    <section>
+		   
+		  	 	<div class="admin-table">
+
+						<table class="stats-table" id="staff-table">
+								<tbody>
+								  <tr>
+									<th>First Name</th>
+									<th>LastName</th>
+									<th>Staff ID</th>
+									<th>LM ID</th>
+									<th>Leave Balance</th>
+									<th>Action</th>
+								  </tr>
+								</tbody>     
+						</table>
+       		 	</div>
+			</section>
+		<!--SECTION ENCLOSING ADMIN TABLE ENDS HERE-->
+
+	   </section>
+	   <!-- SECTION CONTAINER ENDS HERE-->
+
+	</main>
+	<!-- MAIN ENDS HERE-->
+
+	<footer class="reset-footer">
+		<p>Leave Management System | Copyright &copy; 2019</p>
+	</footer>
+ 	
+		 <script src='js/main.js'></script>
+		 <script src='js/admin.js'></script>
+	</body>
+</html>

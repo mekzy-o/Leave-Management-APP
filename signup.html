@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width'initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>SOFT ALLIANCE LMS | SIGNUP</title>
+		<link rel='stylesheet' href='styles.css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	</head>
+	
+	<body>
+		<!-- HEADER SECTION BEGINS HERE-->
+		<header>
+            <div class='container'>
+				<div id='index-logo'>
+                    <h2 style="text-align: center">LEAVE MANAGEMENT SYSTEM</h2>
+				</div>
+				<nav>
+					<ul>
+						<li><a href='index.html'>HOME</a></li>
+						<li><a href='login.html'>LOGIN</a></li>
+						<li class='current'><a href='signup.html'>SIGN UP</a></li>
+						<li><a href='about.html'>ABOUT US</a></li>
+					</ul>
+				</nav>
+
+			</div>		
+		</header>
+		<!-- HEADER SECTION ENDS HERE -->
+
+		<!--MAIN BEGINS HERE -->
+		<main>
+			<!-- SECTION CONTAINER STARTS HERE-->
+			<section>
+				<div class='container'>
+					<h3>CREATE AN ACCOUNT</h3>
+					<form id="signup">
+
+							<label for="firstname">First Name <span>*</span></label>
+							<input type="text" id="firstname" placeholder="Enter First Name" required>
+
+							<label for="lastname">Last Name <span>*</span></label>
+							<input type="text" id="lastname" placeholder="Enter Last Name" required>
+
+							<label for="email">Email Address <span>*</span></label>
+							<input type="email" id="email" placeholder="Enter Email address" required>
+
+			        		<label for="password">Password <span>*</span></label>
+			       		 	<input type="password" id="password" placeholder="Enter Password" required>
+
+			       		 	<span class='light-weight'>By proceeding, I agree to Annual Leave Management Terms of <a href='#'>Service</a> and <a href='#'>Privacy Policy</a></span>
+
+			       		 	<button type="submit">Sign Up</button>
+
+			       		 	<span class='light-weight'>Already have an account? <a href='#'>Login here</a></span>
+		     		</form>
+		   		</div>
+			</section>
+			<!-- SECTION CONTAINER ENDS HERE-->
+		</main>
+		<!-- MAIN ENDS HERE -->
+		
+
+		<footer>
+			<p>Annual Leave Management system | Copyright &copy; 2019</p>
+		</footer>
+
+		<script src='js/main.js'></script>
+	</body>
+</html>

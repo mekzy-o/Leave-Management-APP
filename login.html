@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width'initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LEAVE MANAGEMENT SYSTEM | LOGIN</title>
+		<link rel='stylesheet' href='styles.css'>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+
+		<!-- HEADER SECTION BEGINS HERE-->
+		<header>	
+            <div class='container'>
+				<div id='index-logo'>
+                    <h2 style="text-align: center">SOFT ALLIANCE LMS</h2>
+				</div>
+				<nav>
+					<ul>
+						<li><a href='index.html'>HOME</a></li>
+						<li class='current'><a href='login.html'>STAFF LOGIN</a></li>
+						<li><a href='#'>ABOUT US</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+		<!-- HEADER SECTION ENDS HERE -->
+
+		<!-- MAIN STARTS HERE-->
+		<main>
+			<!-- SECTION STARTS HERE-->
+			<section>
+				<div class='container'>
+						<form id="login" class="center-form">
+
+                             <label for="email">Staff ID</label>
+                             <input type="text" name="email" id="staffid" placeholder="Enter Staff ID" required>
+
+		        			<label for="password">Password</label>
+		       		 		<input type="password" name="password" id="password" placeholder="Enter Password" required>
+		       		 	
+		       		 		<span class='light-weight'><a href='reset.html'>Forgot password?</a></span>
+
+		       		 		<button type="submit" name="login">LOG IN</button>
+		       		 		<hr>
+		       		 		<span class='light-weight'>Don't have an account?<a href='signup.html'> Sign up</a>
+		     			</form>
+		     	</div>
+			</section>
+			<!-- SECTION ENDS HERE-->
+		</main>
+		<!-- MAIN ENDS HERE-->
+
+		<footer class='reset-footer'>
+			<p>Annual Leave Management system | Copyright &copy; 2019</p>
+		</footer>
+
+		<script src='js/main.js'></script>
+	</body>
+</html>
