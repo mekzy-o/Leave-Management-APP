@@ -1,20 +1,13 @@
 {
   "requests": [
     {
-      "leaveReason": "Exam",
-      "leaveStart": "2019-10-10",
-      "leaveEnd": "2019-10-17",
-      "staffid": "123",
-      "status": "approved",
-      "id": 1
-    },
-    {
       "leaveReason": "Health",
       "leaveStart": "2019-10-05",
-      "leaveEnd": "2019-10-10",
+      "leaveEnd": "2019-10-12",
       "staffid": "123",
       "status": "pending",
-      "id": 2
+      "leavebalance": "20",
+      "id": 1
     }
   ],
   "staffs": [

@@ -7,32 +7,6 @@ function datediff(first, second) {
   return Math.round((second - first) / (1000 * 60 * 60 * 24));
 }
 
-//USER SIGNUP
-$(document).ready(
-  $("#signup").submit(function(ev) {
-    ev.preventDefault();
-    let userData = {
-      firstname: $("#firstname").val(),
-      lastname: $("#lastname").val(),
-      email: $("#email").val(),
-      password: $("#password").val()
-    };
-
-    $.ajax({
-      type: "POST",
-      url: "http://localhost:3000/users",
-      data: userData,
-      success: function() {
-        alert("Thank You! Account created successfully.");
-        location.reload();
-      },
-      error: function() {
-        alert("Account could not be created!");
-      }
-    });
-  })
-);
-
 // STAFF LOGIN
 $(document).ready(
   $("#login").submit(function(ev) {
@@ -82,6 +56,7 @@ $(document).ready(function() {
             <td>${request.leaveEnd}</td>
             <td>${request.staffid}</td>
             <td>${request.status}</td>
+            <td>${request.leavebalance}</td>
             <td><button id=${request.id} class="delete">Delete</button>
                 </td>
             </tr>`);
@@ -106,7 +81,8 @@ $(document).ready(function() {
       leaveStart: $("#date").val(),
       leaveEnd: $("#end").val(),
       staffid: window.localStorage.userId,
-      status: "pending"
+      status: "pending",
+      leavebalance: window.localStorage.leavebalance
     };
     let diff = Math.floor(
       (Date.parse(leaveData.leaveEnd) - Date.parse(leaveData.leaveStart)) /

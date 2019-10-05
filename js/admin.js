@@ -23,8 +23,15 @@ $(document).ready(function() {
                         <span>${request.staffid}<span>
                     </td>
                     <td>
-                        <span>${request.status}<span>
-                        <input class='editBtn' id='status'>
+                        <select id='request-status' disabled>
+                          <option selected disabled value=${request.status}>${request.status}</option>
+                          <option value="pending">pending</option>
+                          <option value="approved">approved</option>
+                          <option value="rejected">rejected</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span>${request.leavebalance}<span>
                     </td>
                     <td>
                         <button class="editRequest noedit edit">Update</button>
@@ -33,21 +40,26 @@ $(document).ready(function() {
                 </tr>`);
   }
 
+  var value = $(document).on("change", "#request-status", function(e) {
+    textResult = this.options[e.target.selectedIndex].text;
+  });
+
   //adding edit functionality...
   $("#admin-table").delegate(".editRequest", "click", function() {
+    $("#request-status").prop("disabled", false);
     var $tr = $(this).closest("tr");
     $tr.addClass("editBtn");
   });
 
   $("#admin-table").delegate(".saveRequest", "click", function() {
+    confirm("Are you about the decision of the Request?");
     var $tr = $(this).closest("tr");
-
     let data = {
-      status: $("#status").val()
+      status: textResult
     };
 
-    console.log(data);
-    //console.log($tr.find('input.status').val());
+    if (data.status === "approved") {
+    }
 
     //put request within the save button...
     $.ajax({
@@ -79,7 +91,6 @@ $(document).ready(function() {
 });
 
 // ADMIN ADD STAFF FUNCTIONALITY
-//USER SIGNUP
 $(document).ready(
   $("#add-staff").submit(function(ev) {
     console.log("I am here!");
@@ -147,27 +158,26 @@ $(document).ready(function() {
 
   $("#staff-table").delegate(".saveRequest", "click", function() {
     var $tr = $(this).closest("tr");
-
     let data = {
-      firstname: $("#firstnameInput").val(),
+      firstname: $("#firstnameInput").val()
     };
     console.log(request);
     $.ajax({
-        type: "PATCH",
-        url: "http://localhost:3000/staffs/" + $tr.attr("id"),
-        data: data,
-        success: function() {
+      type: "PATCH",
+      url: "http://localhost:3000/staffs/" + $tr.attr("id"),
+      data: data,
+      success: function() {
         // console.log(data);
-          alert("updated sucessfully!");
-          document.location.reload();
-        },
-        error: function() {
-          alert("server error...update failed");
-        }
-      });
+        alert("updated sucessfully!");
+        document.location.reload();
+      },
+      error: function() {
+        alert("server error...update failed");
+      }
+    });
   });
 
-  //DELETE 
+  //DELETE
   $("#staff-table").delegate(".delete", "click", function() {
     let tr = $(this)
       .closest("tr")
@@ -176,7 +186,7 @@ $(document).ready(function() {
       type: "DELETE",
       url: "http://localhost:3000/staffs/" + tr,
       success: function() {
-        confirm('Are You sure you want to delete user?');
+        confirm("Are You sure you want to delete user?");
         $(this)
           .closest("tr")
           .remove();
